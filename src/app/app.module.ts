@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

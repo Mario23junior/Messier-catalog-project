@@ -1,17 +1,17 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p>Lorem, ipsum dolor sit amet consectetur.</p>
-      <button mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-    <div class="sidenav-content">
-      <button type="button" mat-button>
-        Toggle sidenav
-      </button>
-    </div>
-  
-  </mat-drawer-container>
-  
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list class="nav-list">
+      <a mat-nav-list routerLink="/" class="nav-list">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>
