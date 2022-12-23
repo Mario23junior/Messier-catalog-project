@@ -6,10 +6,12 @@ import { NavComponent } from './components/nav/nav.component';
 const routes: Routes = [
   {
     path: "",
-    component: NavComponent
-  },{
-    path:'home',
-    component:HomeComponent
+    component: NavComponent, children: [
+      {
+        path: 'home',
+        component: HomeComponent
+      }
+    ]
   }
 
 ];
