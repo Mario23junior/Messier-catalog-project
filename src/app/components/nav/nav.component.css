@@ -4,4 +4,24 @@
 
  .sidenav{
   width: 13rem;
+  color:white;
+ }
+
+ img {
+  padding-left: 1rem;
+  width: 80%;
+  height: 11rem;
+  margin: .8rem auto 3rem;
+ }
+
+ .sidenav a {
+   color: white;
+ }
+
+ .sidenav i {
+  margin-right: .6rem;
+ }
+
+ .menu {
+  margin: 1rem 0 0 1rem;
  }

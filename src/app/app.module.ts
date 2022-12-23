@@ -26,9 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
-import { FormGroup } from '@angular/forms';
 
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -67,7 +66,7 @@ import { MatInputModule } from '@angular/material/input'
     MatDialogModule,
     MatSortModule,
     FormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
