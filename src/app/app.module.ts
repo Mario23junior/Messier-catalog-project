@@ -32,7 +32,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { CatalogListComponent } from './components/catalog-list/catalog-list.component'
 
 
 
@@ -40,7 +41,8 @@ import { HomeComponent } from './components/home/home.component'
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CatalogListComponent
   ],
   imports: [
     BrowserModule,
