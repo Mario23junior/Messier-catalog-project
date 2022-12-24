@@ -5,7 +5,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: NavComponent, children: [
       {
         path: 'home',
