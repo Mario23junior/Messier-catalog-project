@@ -4,4 +4,6 @@ interface DeepObject {
     constelacao: String
     nome: String
     magnitude: number
+    catalogingMapping: CatalogingMapping[]
+    observationParameters:ObservationParameters[]
 }
