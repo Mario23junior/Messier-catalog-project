@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CatalogingMappingService {
- 
+
   constructor(private http: HttpClient) { }
   uri: String = "http://localhost:8080/api"
 
-  findAllCatalogingList():Observable<CatalogingMapping> {
+  findAllCatalogingList(): Observable<DeepObject[]> {
     var url = `${this.uri}/project/cataloging/`
-    return this.http.get<CatalogingMapping>(url)
+    return this.http.get<DeepObject[]>(url)
   }
 }
