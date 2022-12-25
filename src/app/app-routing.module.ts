@@ -10,7 +10,7 @@ const routes: Routes = [
     component: NavComponent, children: [
       {
         path: 'home',
-        component: HomeComponent
+        component: CatalogListComponent
       },{
         path:'catalog-list',
         component:CatalogListComponent

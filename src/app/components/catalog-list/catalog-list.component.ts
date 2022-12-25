@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DeepObject } from '../models/DeepObject';
 import { CatalogingMappingService } from '../service/cataloging-mapping.service';
 
 @Component({
@@ -10,13 +12,15 @@ export class CatalogListComponent {
 
   dataCatalogList: DeepObject[] = []
 
-  constructor(private service: CatalogingMappingService) { }
+  constructor(public service: CatalogingMappingService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.findAll()
+  }
 
-  findAll():void {
+  findAll(): void {
     this.service.findAllCatalogingList()
-      .subscribe((res) => {
+      .subscribe(res => {
         this.dataCatalogList = res
       })
   }

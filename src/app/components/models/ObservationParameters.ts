@@ -1,4 +1,4 @@
-interface ObservationParameters {
+export interface ObservationParameters {
     id: number
     tipo: String
     assecaoReta: String

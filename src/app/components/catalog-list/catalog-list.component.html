@@ -1,1 +1,14 @@
-<p>catalog-list works!</p>
+<div class="container" mat-elevation-z8>
+  <mat-grid-list cols="4" rowHeight="4:5.7">
+    <mat-grid-tile *ngFor="let basereturn of dataCatalogList">
+      <mat-card class="card" appMaterialElevation>
+        <img mat-card-image src="{{basereturn.image}}" alt="Photo of a Shiba Inu">
+        <mat-card-content class="subtitle">
+          <p>{{basereturn.constelacao}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+ 

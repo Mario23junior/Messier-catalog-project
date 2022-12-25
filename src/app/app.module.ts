@@ -28,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -69,7 +70,8 @@ import { CatalogListComponent } from './components/catalog-list/catalog-list.com
     MatProgressSpinnerModule,
     MatDialogModule,
     MatSortModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule
 
   ],
   providers: [],
