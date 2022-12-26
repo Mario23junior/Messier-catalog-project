@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { CatalogingMapping } from '../models/CatalogingMapping';
 import { DeepObject } from '../models/DeepObject';
-import { CatalogingMappingService } from '../service/cataloging-mapping.service';
+import { ObservationParameters } from '../models/ObservationParameters';
+import { CataloginMappingService } from '../service/catalogin-mapping.service';
+import { DeepObjectService } from '../service/DeepObjectService.service';
+import { ObservationParametersService } from '../service/observation-parameters.service';
 
 @Component({
   selector: 'app-catalog-list',
@@ -10,18 +14,42 @@ import { CatalogingMappingService } from '../service/cataloging-mapping.service'
 })
 export class CatalogListComponent {
 
-  dataCatalogList: DeepObject[] = []
+  dataDeepObject: DeepObject[] = []
+  dataCatalogingMapping: CatalogingMapping[] = []
+  dataObservation: ObservationParameters[] = []
 
-  constructor(public service: CatalogingMappingService) { }
+
+  constructor(
+    public serviceDeepObjectService: DeepObjectService,
+    public serviceCatalogin: CataloginMappingService,
+    public serviceObservation: ObservationParametersService
+
+  ) { }
 
   ngOnInit(): void {
-    this.findAll()
+    this.findAllCatalogingBase()
   }
 
-  findAll(): void {
-    this.service.findAllCatalogingList()
+  findAllCatalogingBase(): void {
+    this.serviceDeepObjectService.findAllCatalogingList()
       .subscribe(res => {
-        this.dataCatalogList = res
+        this.dataDeepObject = res
       })
   }
+
+  ObservationParameters(): void {
+    this.serviceObservation.findAllObservationParameters()
+      .subscribe(res => {
+        this.dataObservation = res
+      })
+  }
+
+  CataloginMapping(): void {
+    this.serviceCatalogin.findAllCatalogingMapping()
+      .subscribe(res => {
+        this.dataCatalogingMapping = res
+      })
+  }
+
+
 }
