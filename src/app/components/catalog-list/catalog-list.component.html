@@ -1,11 +1,12 @@
 <div class="container" mat-elevation-z8>
-  <mat-grid-list cols="4" rowHeight="4:5.10">
+  <mat-grid-list cols="3" rowHeight="4:5.10">
     <mat-grid-tile *ngFor="let basereturn of dataDeepObject">
       <mat-card class="card" appMaterialElevation>
         <img mat-card-image src="{{basereturn.image}}" alt="Photo of a Shiba Inu">
-        <mat-list-item>{{basereturn.constelacao}}</mat-list-item>
-        <mat-list-item>{{basereturn.magnitude}} : Ano luz</mat-list-item>
-      </mat-card>
+        <mat-list-item>Nome : {{basereturn.nome}}</mat-list-item>
+        <mat-list-item>Costelação : {{basereturn.constelacao}}</mat-list-item>
+        <mat-list-item>Anos luz :{{basereturn.magnitude}} : Ano luz</mat-list-item>
+       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
